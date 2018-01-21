@@ -1,0 +1,37 @@
+#include "domain.hpp"
+
+Domain::Domain()
+{
+	IMAX = 0;
+	JMAX = 0;
+	KMAX = 0;
+}
+
+Domain::~Domain()
+{
+
+}
+
+void Domain :: set_domain_ranges(const int i,const int j,const int k){
+    IMAX = i;
+    JMAX = j;
+    KMAX = k;
+}
+
+
+int Domain :: get_IMAX() const{
+    return IMAX;
+}
+
+int Domain :: get_JMAX() const{
+    return JMAX;
+}
+
+int Domain :: get_KMAX() const{
+    return KMAX;
+}
+
+
+int Domain :: n_nodes() const{
+    return static_cast<int>(nodes.size());
+}
